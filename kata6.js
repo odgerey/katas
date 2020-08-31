@@ -1,10 +1,14 @@
 const repeatNumbers = function(data) {
-  let repeatedNum = data[0];
-  let value = data[1];
-  
-  let result = [];
-  for (let i = 0; i < value; i++) {
-    result.push(repeatedNum);
+  // completed with the following tutorial: https://www.youtube.com/watch?v=S9fMTM4m17s
+
+  let result = "";
+  for ( let d = 0; d < data.length; d++) {
+    for (let i = 0; i < data[d][1]; i++) {
+      result += data[d][0]
+    }
+    if (d < data.length -1) {
+      result += ", "
+    }
   }
   return result;
 };
